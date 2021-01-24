@@ -12,7 +12,6 @@
             <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src = "Inlogo.png" border = "0" width = "250" height = "70" align = "center">
             </td> 
         <tr>
-
         <br>
     <tr>
            <td align = "center"> &nbsp; &nbsp; &nbsp;<input type = "text" name = "user" size = "35" value = ""> </td>
@@ -50,6 +49,9 @@
 </table>
         <br>
          
+         <?php
+
+         ?>
 
 </body>
 </html>
