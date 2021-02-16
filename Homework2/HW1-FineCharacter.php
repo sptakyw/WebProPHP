@@ -36,7 +36,7 @@
     function show_form()
     {
         echo "<center><h1> HW2-1:Find Character</h1>";
-        echo '<form method="get" action="FindCharacter.php">';
+        echo '<form method="get" action="HW1-FineCharacter.php">';
         echo 'Your Text : <input type="text" name="text" size="10" value=""/><br><br>';
         echo '<input type="submit" value=" submit " /><input type="reset" value=" Clear " />';
         echo '</form></center>';
