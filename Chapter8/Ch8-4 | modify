@@ -65,9 +65,9 @@ function show_checker( $maxRow, $maxCol, $start , $end ,$bgcolor1, $bgcolor2) {
                 echo '</tr>';
         }
         echo '</table>';
-        echo Average($sum , $maxRow * $maxCol) . "<br>" ;
-        echo $min . "<br>" ;
-        echo $max . "<br>" ;
+        echo "Average = " . Average($sum , $maxRow * $maxCol) . "<br>" ;
+        echo "Min = " . $min . "<br>" ;
+        echo "Max = " . $max . "<br>" ;
 }
 
     function FindMin($min , $num){
