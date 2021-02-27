@@ -10,7 +10,7 @@
         <option value = 2> แก้วมังกร </option>
         <option value = 3> กล้วย </option>    
     </select>
-</fotm>
+</form>
 <td> <br> <td>
 <td> <br> <td>
     <tr>
