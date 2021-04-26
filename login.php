@@ -1,42 +1,31 @@
 <?php
-    session_start();
-    $message="";
-    $hostname = "localhost";
-    $username = "root";
-    $password = "12345";
-    $dbname = "bookit";
-    if(count($_POST)>0) {
-        $con = new mysqli($hostname, $username, $password, $dbname);
-        $result = mysqli_query($con,"SELECT * FROM login_user
-                WHERE user_name='" . $_POST["user_name"] . "'
-                and password = '". $_POST["password"]."'");
-        $row = mysqli_fetch_array($result);
-        if(is_array($row)) {
-            $_SESSION["id"] = $row['id'];
-            $_SESSION["name"] = $row['name'];
-        } else {
-            $message = "Invalid Username or Password!";
-        }
-    }
-    if(isset($_SESSION["id"])) {
-    header("Location:index1.php");
-    }
+    echo "Login" ;
 ?>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>User Login</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" 
+    crossorigin="anonymous">
 </head>
 <body>
-    <form name="frmUser" method="post" action="" align="center">
-        <div class="message"><?php if($message!="") { echo $message; } ?>
+    <form>
+        <div class="mb-3">
+            <label for="username" class="form-label">Email address</label>
+            <input type="text" class="form-control" id="username">
         </div>
-        <h3 align="center">Enter Login Details</h3>Username:<br>
-        <input type="text" name="user_name"><br>Password:<br>
-        <input type="password" name="password">
-        <br><br>
-        <input type="submit" name="submit" value="Submit">
-        <input type="reset">
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" 
+    crossorigin="anonymous"></script>
 </body>
 </html>
